@@ -1,3 +1,3 @@
 FROM nginx
 
-RUN apt-get update && apt-get install wget -y
+RUN apt-get update && apt-get install wget vi cron -y
