@@ -3,9 +3,9 @@ services:
 
 script:
   - set -e
-  - docker build -t circa10a/nginx-wget .
-  - docker run -d --rm --name nginx circa10a/nginx-wget
+  - docker build -t circa10a/nginx-wget:alpine .
+  - docker run -d --rm --name nginx circa10a/nginx-wget:alpine
   - sleep 10
   - docker ps | grep nginx
   - docker login -u="$docker_username" -p="$docker_password"
-  - docker push circa10a/nginx-wget
+  - docker push circa10a/nginx-wget:alpine
