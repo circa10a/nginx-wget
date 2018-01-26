@@ -7,6 +7,12 @@ This image takes the offical nginx image and installed wget and curl. This used 
 
 ### Usage
 
+#### Debian
 ```
-docker run -d --name nginx -p 80:80 circa10a/nginx-wget
+docker run -d --name nginx -p 80:80 circa10a/nginx-wget:latest
+```
+
+#### Alpine
+```
+docker run -d --name nginx -p 80:80 circa10a/nginx-wget:alpine
 ```
