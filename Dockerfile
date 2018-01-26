@@ -1,3 +1,5 @@
-FROM nginx
+FROM nginx:alpine
 
-RUN apt-get update && apt-get install -y wget cron && rm -rf /var/lib/apt/lists/*
+RUN apk update && \
+apk add dcron wget && \
+rm -rf /var/cache/apk/*
